@@ -1,0 +1,392 @@
+.app {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+.app-header p {
+  color: var(--muted);
+  max-width: 90ch;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.panel-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sides {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 1100px) {
+  .sides {
+    grid-template-columns: 1fr;
+  }
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.field-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.field-label em {
+  font-style: normal;
+  color: var(--accent);
+  margin-left: 0.25rem;
+}
+
+.side-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+.bonus-table,
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.bonus-table th,
+.result-table th {
+  text-align: left;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bonus-table td,
+.result-table td {
+  padding: 0.25rem 0.35rem;
+  border-bottom: 1px solid rgba(49, 53, 72, 0.5);
+}
+
+.bonus-table input {
+  width: 100%;
+  min-width: 60px;
+  padding: 0.25rem 0.35rem;
+}
+
+.result-table td:not(:first-child),
+.result-table th:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+tr.totals td {
+  font-weight: 600;
+  color: #fff;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.75rem 0;
+}
+
+.stat {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  min-width: 130px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-good .stat-value {
+  color: var(--good);
+}
+
+.stat-bad .stat-value {
+  color: var(--bad);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skillmod table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.skillmod td {
+  padding: 0.2rem 0.3rem;
+  border-bottom: 1px solid rgba(49, 53, 72, 0.5);
+}
+
+.skillmod td:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.assumption {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(49, 53, 72, 0.5);
+}
+
+@media (max-width: 800px) {
+  .assumption {
+    grid-template-columns: 1fr;
+  }
+}
+
+.assumption-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  margin-right: 0.4rem;
+  border: 1px solid var(--border);
+}
+
+.tag-datamined {
+  color: var(--good);
+  border-color: var(--good);
+}
+
+.tag-community-tested {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.tag-unknown {
+  color: var(--bad);
+  border-color: var(--bad);
+}
+
+.hero-pool {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.3rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.muted-row td {
+  opacity: 0.55;
+}
+
+.advanced {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+}
+
+.advanced summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.bonus-table input[type='checkbox'] {
+  width: auto;
+  min-width: 0;
+}
+
+.stat-skills {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.75rem;
+}
+
+.histogram-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 110px;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.histogram-bar {
+  background: var(--panel-2);
+  border-radius: 3px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.histogram-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.histogram-count {
+  text-align: right;
+}
+
+.run-log {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.run-log table {
+  margin-bottom: 0;
+}
+
+.run-log thead th {
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+}
+
+.calibration-result {
+  margin-top: 1rem;
+}
+
+.ocr-import {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.dropzone {
+  padding: 0.75rem;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.dropzone p {
+  margin: 0.25rem 0;
+}
+
+.dropzone input[type='file'] {
+  width: auto;
+}
+
+.ocr-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 220px;
+  margin: 0.5rem auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.ocr-text {
+  width: 100%;
+  font: 12px/1.4 var(--mono);
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.warn {
+  color: var(--bad);
+  font-size: 0.8rem;
+}
